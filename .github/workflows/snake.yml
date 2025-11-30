@@ -14,24 +14,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Используем v3, как мы уже делали
       - name: Generate Snake SVG
-        uses: Platane/snk@v3
+        uses: Platane/snk@v3 
         id: snake-svg-action
         with:
           github_user_name: IluhaProgrammer
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
+          # ИСПРАВЛЕНИЕ: ПУТЬ 'output/' ДОБАВЛЕН ЗДЕСЬ
+          # Убран output_folder, чтобы избежать ошибки
           outputs: |
-            github-contribution-grid-snake.svg
-            github-contribution-grid-snake-dark.svg?palette=github-dark
+            output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
           
-          output_folder: output 
-          
+      # Шаг коммита должен быть изменен, чтобы использовать git add output
       - name: Commit files
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add output
+          git add output 
           git commit -m "Generate code (snake) by GitHub Actions" || echo "No changes to commit"
 
       - name: Push changes
