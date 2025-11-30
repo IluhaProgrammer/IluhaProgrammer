@@ -52,9 +52,9 @@
 
 ###
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=IluhaProgrammer&theme=bear&show_icons=true&hide_border=true&count_private=true&locale=ru">
-</p>
+<div align="center">
+    <img src="https://avatars.githubusercontent.com/u/131701867?v=4" width="150" height="150" alt="IluhaProgrammer Avatar"/>
+</div>
 
 ###
 
