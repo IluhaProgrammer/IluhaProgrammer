@@ -1,1 +1,49 @@
+name: Generate Snake Animation
 
+on:
+  # Запускать ежедневно в полночь (UTC)
+  schedule:
+    - cron: "0 0 * * *" 
+  # Позволяет запускать вручную из вкладки Actions
+  workflow_dispatch:
+  
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Snake SVG
+        uses: Platane/snk@master
+        id: snake-svg-action
+        with:
+          # Имя пользователя, для которого генерируется змейка
+          github_user_name: IluhaProgrammer
+          # Токен для доступа к статистике (обязательно!)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Настройки вывода
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          
+          # Настройки репозитория
+          # Важно! Это путь, который вы указали в своем README: IluhaProgrammer/IluhaProgrammer/refs/heads/output/
+          # Экшен сам создаст папку 'output' и поместит файлы .svg туда
+          output_folder: output 
+          
+      - name: Commit files
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add output
+          git commit -m "Generate code (snake) by GitHub Actions" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
