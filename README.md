@@ -33,6 +33,8 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=grafana" height="40" alt="postgresql logo"  />
   <img width="12" />
+  <img src="https://skillicons.dev/icons?i=jenkins" height="40" alt="postgresql logo"  />
+  <img width="12" />
   <img src="https://skillicons.dev/icons?i=ansible" height="40" alt="mysql logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=terraform" height="40" alt="mysql logo"  />
@@ -44,6 +46,8 @@
   <img src="https://skillicons.dev/icons?i=kubernetes" height="40" alt="vscode logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=gitlab" height="40" alt="visualstudio logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=redis" height="40" alt="visualstudio logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=obsidian" height="40" alt="neovim logo"  />
   <img width="12" />
