@@ -60,13 +60,7 @@
     <img src="https://avatars.githubusercontent.com/u/131701867?v=4" width="150" height="150" alt="IluhaProgrammer Avatar"/>
 </div>
 
-###
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=IluhaProgrammer&theme=radical&no-frame=true&no-bg=true&margin-w=4">
-</p>
-
-###
 
 <p align="center">
   <picture>
