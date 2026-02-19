@@ -60,8 +60,6 @@
     <img src="https://avatars.githubusercontent.com/u/131701867?v=4" width="150" height="150" alt="IluhaProgrammer Avatar"/>
 </div>
 
-
-
 <p align="center">
   <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IluhaProgrammer/IluhaProgrammer/main/output/github-contribution-grid-snake-dark.svg" />
